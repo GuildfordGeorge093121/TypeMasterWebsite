@@ -75,14 +75,14 @@ p{
     display: grid;
 }
 .container{
-    width: 90%;
-    max-width: 1110px;
+    max-width: 90vw;
+    width: 1110px;
     margin: 0 auto;
 }
 .btn{
     height: 58px;
     border-radius: .5rem;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 0 1rem;   
 }
@@ -154,7 +154,7 @@ nav{
 
 .hero-content{
     width: 445px;
-    margin-right: 2rem;
+    margin-right: 4rem;
 }
 
 .hero-content p{
@@ -205,7 +205,7 @@ nav{
 }
 
 .hero-bottom-content{
-    margin-left: 6rem;
+    margin-left: 3rem;
 }
 .hero-bottom-content p{
     margin-top: 27px;
@@ -216,38 +216,22 @@ nav{
 
 .hero-dl{
     margin-bottom: 7rem;
+}
+.hero-dl .container{
     position: relative;
 }
 
 .hero .design{
-    right: -12%;
-    top: 0%;
+   right: 0;
+   transform: translateX(110%);
 }
 .hero-dl .design{
-   bottom: 0%;
-   left: -20%;
+   left: 0;
+   bottom: 0;
+   transform: translateX(-110%);
 }
-@media only screen and (max-width:1369px){
-    .hero .design{
-        right: -15%;
-    }
-}
-@media only screen and (max-width:1256px){
-    .hero .design{
-        right: -18%;
-    }
-}
-@media only screen and (max-width:1150px){
-    .hero .design{
-        right: -20%;
-    }
-}
-@media only screen and (max-width:1050px){
-    .hero .design{
-        right: -23%;
-    }
-}
-@media only screen and (max-width: 950px){
+
+@media only screen and (max-width: 850px){
     .hero .design{
         display: none;
     }
@@ -261,8 +245,8 @@ nav{
     .hero-img {
         position: absolute;
         top: 50%;
-        right: -7%;
-        transform: translateY(-50%);
+        right: 0;
+        transform: translateY(-50%) translateX(20%);
         width: 480px;
 
     }
@@ -270,7 +254,7 @@ nav{
         justify-content:flex-start;
         align-items: center;
         margin-bottom: 2rem;
-        height: 70vh
+        height: 470px
     }
     .hero .container{
         position: static;
@@ -278,35 +262,56 @@ nav{
     .hero{
         position: relative;
     }
-
-
-    
+   
 }
-@media only screen and (max-width: 850px){
+
+@media only screen and (max-width: 800px){
     .hero-img{
         width:350px;
     }
     .hero .hero-detail{
-        height: 50vh;
+        height: 350px;
     }
+    
       
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 700px){
+    .hero-img{
+        width:300px;
+    }
+    .hero .hero-detail{
+        height: 300px;
+    }
+    
+      
+}
+@media only screen and (max-width: 650px){
+    .hero .container{
+        max-width: 100vw;
+    }
     .hero-img {
         position: static;
         top: 0;
-        transform: translateY(0);
+        transform: translateY(0) translateX(5vw);
         margin: 1rem 0;
         width: 100%;
     }
     .hero{
         margin-bottom: 2rem;
     }
+    .hero-content{
+        padding-left: 4vw;
+        width: 95vw;
+    }
     .hero .hero-detail{
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
     }
+    .hero-content h1{
+        width: 200px;
+    }
+    
     .desktop{
         display: none;
     }
@@ -314,10 +319,7 @@ nav{
         display: block;
     }
 }
-@media only screen and (max-width:450px){
-    .hero-content{
-        width: 100%;
-    }
+@media only screen and (max-width:490px){
     .hero-content p{
         width: 100%;
     }
@@ -365,8 +367,11 @@ nav{
     align-items: center;
     margin-bottom: 3rem;
 }
+.cart-title{
+    margin-bottom: 24px;
+}
 
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1100px){
     .hero-dl .design{
         display: none;
      }
@@ -397,6 +402,7 @@ nav{
     }
 
 }
+
 /* FOOTER */
 footer{
     padding: 3rem 0;
@@ -419,13 +425,16 @@ footer span{
 }
 
 /* Mobile */
-@media only screen and (max-width:620px){
-    .hero-dl h2,
-    .hero-dl h3,
-    .hero-dl p,
-    .category h2,
-    .category h3,
-    .category p{
+@media only screen and (max-width:650px){
+    .hero-dl .container{
+        max-width: 100vw;
+        margin: 0;
+    }
+    .hero-dl .container >.d-flex{
+        display: block;
+    }
+    .hero-dl,
+    .category{
         text-align: center;
     }
     .category .d-grid{
@@ -436,7 +445,15 @@ footer span{
     .cart{
         align-items: center;
     }
-
+    .img-grid{
+        width: 97vw;
+        transform: translateX(-3vw);
+    }
+    .hero-bottom-content{
+        width: 90vw;
+        margin-left:  auto;
+        margin-right:  auto;
+    }
     .hero-bottom-content .d-flex{
         flex-direction: column;
         align-items: center;
