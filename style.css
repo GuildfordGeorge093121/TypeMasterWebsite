@@ -139,6 +139,7 @@ nav{
 .hero{
     margin-bottom: 8px;
     position: relative;
+    overflow-x: hidden;
 }
 
 .hero .container{
