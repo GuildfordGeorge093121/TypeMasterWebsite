@@ -218,7 +218,7 @@ nav{
 .hero-dl{
     margin-bottom: 7rem;
 }
-.hero-dl .container{
+.hero-dl .img-grid{
     position: relative;
 }
 
@@ -373,9 +373,6 @@ nav{
 }
 
 @media only screen and (max-width: 1100px){
-    .hero-dl .design{
-        display: none;
-     }
     .hero-bottom-content{
         margin: 4.5rem 0;
     }
@@ -389,7 +386,7 @@ nav{
     }
     .hero-bottom-content p{
         margin-top:0;
-        margin-left: 4rem;
+        margin-left: 36px;
     }
     .img-1,
     .img-2{
@@ -399,9 +396,15 @@ nav{
     /* category */
     .category .d-grid{
         grid-template-columns: repeat(2,1fr);
-        gap: 3rem;
+        gap: 72px 69px;
     }
 
+}
+
+@media only screen and (max-width: 850px){
+    .hero-dl .design{
+        display: none;
+     }
 }
 
 /* FOOTER */
@@ -422,7 +425,6 @@ footer span{
         font-size: 3rem;
         line-height: 3rem;
     }
-    
 }
 
 /* Mobile */
@@ -448,6 +450,10 @@ footer span{
     }
     .img-grid{
         transform: translateX(-5vw);
+    }
+    .img-1,
+    .img-2{
+        height:193px
     }
     .hero-bottom-content{
         width: 90vw;
