@@ -12,7 +12,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* overflow-x: scroll; */
 }
 
 /* UNIVERSAL STYLE */
@@ -41,7 +40,7 @@ h1{
 h2{
     font-size: 2rem;
     line-height: 2.25rem;
-    width: 250px;
+    width: 255px;
 }
 h3{
     font-size: 1.5rem;
